@@ -62,7 +62,7 @@ function Navbar() {
           </button>
         
             <a className="navbar-brand mx-auto " href="/">
-              <img src="https://topclass1.onrender.com/public/logo.jpg" alt="TopClass Logo" style={{ height: '90px',paddingLeft:'15px' }} />
+              <img src="./logo.jpg" alt="TopClass Logo" style={{ height: '90px',paddingLeft:'15px' }} />
             </a>
             {currentUser ? (
               <ul className="navbar-nav ml-auto px-3">
