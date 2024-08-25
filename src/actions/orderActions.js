@@ -6,7 +6,7 @@ export const placeOrder=(subtotal,codeClient,rS,modalitePai,dateCmd) =>async (di
     const currentUser = getState().loginUserReducer.currentUser;
     const cartItems = getState().cartReducer.cartItems;
 try{
-    const response = await axios.post('https://topclass1.onrender.com/api/orders/placeorder',{subtotal ,currentUser, cartItems,codeClient,rS,modalitePai,dateCmd})
+    const response = await axios.post('https://topclassapi2.onrender.com/api/orders/placeorder',{subtotal ,currentUser, cartItems,codeClient,rS,modalitePai,dateCmd})
     console.log(response);
     dispatch({type:'PLACE_ORDER_SUCCESS'})
 
