@@ -23,7 +23,7 @@ export const getUserOrders = () => async (dispatch, getState) => {
     dispatch({ type: 'GET_USER_ORDERS_REQUEST' });
 
     try {
-        const response = await axios.post('https://topclass1.vercel.app/api/orders/getuserorders', { currentUser });
+        const response = await axios.post('https://topclassapi2.onrender.com/api/orders/getuserorders', { currentUser });
         dispatch({ type: 'GET_USER_ORDERS_SUCCESS', payload: response.data });
     } catch (error) {
         dispatch({ 
