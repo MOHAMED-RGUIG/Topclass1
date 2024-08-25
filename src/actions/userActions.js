@@ -18,7 +18,7 @@ export const loginUser = (user) => async  (dispatch) => {
     dispatch({ type: 'USER_LOGIN_REQUEST' });
 
     try {
-        const response = await axios.post('/api/users/login', user, {
+        const response = await axios.post('https://topclass1.vercel.app/api/users/login', user, {
             headers: {
                 'Content-Type': 'application/json'
             }
