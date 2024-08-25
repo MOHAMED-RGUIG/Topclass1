@@ -25,12 +25,12 @@ function AppContent() {
       
       <Routes>
       <Route path='/' element={<Loginscreen />} />
-        <Route path='https://topclass1.onrender.com/homescreen' element={<Homescreen />} />
+        <Route path='/homescreen' element={<Homescreen />} />
   
-        <Route path='https://topclass1.onrender.com/cart' element={<Cartscreen />} />
+        <Route path='/cart' element={<Cartscreen />} />
        { /* <Route path='/register' element={<Registerscreen />} /> */}
       
-        <Route path="https://topclass1.onrender.com/orders" element={<CartDetailsScreen />} />
+        <Route path="/orders" element={<CartDetailsScreen />} />
       { /*  <Route path="/allorders" element={<CartAllOrders />} /> */} 
       </Routes>
       
