@@ -116,7 +116,7 @@ function Cartscreen() {
             doc.text(`BON DE COMMANDE`, 65, 110);
     
             const tableColumns = ['Référence','Désignation','Quantité', 'Prix unitaire','Total HT'];
-            const tableRows = orderGroup.items.map(item => [item.ITMREF,item.ITMDES, item.QTY, item.GRAT == 1 ? 'GRATUIT' : `${item.NETPRI}`,`${item.TOTLIN}`]);
+            const tableRows = orderGroup.items.map(item => [item.ITMREF,item.ITMDES, item.QTY, item.GRAT == 1 ? 'Gratuit' : `${item.NETPRI}`,`${item.TOTLIN}`]);
     
             doc.autoTable({
                 startY: 120,
