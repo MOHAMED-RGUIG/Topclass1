@@ -123,7 +123,7 @@ function Cartscreen() {
                 head: [tableColumns],
                 styles: { cellPadding: 1, fontSize: 10 },
                 body: tableRows,
-                foot: [[ '','', '',  `Total`, `${totalPrice.toFixed(2)} DH`]],
+                foot: [[ '','', '',  `Total HT`, `${totalPrice.toFixed(2)} DH`]],
                 headStyles: { fillColor: '#063970' },  // Light grey background
                 footStyles: { fillColor: '#063970' },
                 didDrawPage: function (data) {
