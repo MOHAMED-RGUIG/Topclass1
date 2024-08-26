@@ -198,6 +198,7 @@ a.list-group-item.list-group-item-action {
 .list-group .nav-link{
   font-family:poppins;
   font-weight: 600;
+  z-index: 1005
 }
 
 button.category-btn.text-truncate.col-xs-3.col-3.col-md-3 {
