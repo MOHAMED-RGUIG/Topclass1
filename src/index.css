@@ -156,7 +156,7 @@ background-color: #ffffff !important;
   position: fixed;
   top: 0;
   left: -250px; /* Masquer le sidebar par défaut */
-  z-index: 1002;
+  z-index: 2000;
   transition: left 0.3s ease;
 }
 
@@ -220,11 +220,11 @@ button.category-btn.text-truncate.col-xs-3.col-3.col-md-3 {
 
 .main-content.sidebar-open {
   margin-left: 250px;
-  z-index: 1000;  /* Déplacer le contenu principal quand le sidebar est ouvert */
+  z-index: 2000;  /* Déplacer le contenu principal quand le sidebar est ouvert */
 }
 
 .navbar {
-  z-index: 2000;
+  z-index: 1000;
 }
 
 .check{
