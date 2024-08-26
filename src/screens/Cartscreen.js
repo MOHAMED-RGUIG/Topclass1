@@ -42,9 +42,10 @@ function Cartscreen() {
         const orderGroup = {
             items: cartItems.map(item => ({
                 QTY: item.quantity,
-                NETPRI: item.price,
+                NETPRI: item.PRI_0,
                 TOTLIN: item.price ,
                 ITMDES: item.ITMDES1_0,
+                ITMREF :item.ITMREF_0,
                 GRAT: item.isChecked ? 1 : 0 // Assuming isChecked indicates if the item is free
             })),
             orderInfo: {
