@@ -140,8 +140,8 @@ const CartDetailsScreen = () => {
        doc.setTextColor('#003f7e'); // Set text color to blue (RGB format)
        doc.text(`BON DE COMMANDE`, 65, 110);
 
-       const tableColumns = ['Réference','Désignation', 'Gratuit','Quantité', 'Prix unitaire','Total HT'];
-       const tableRows = orderGroup.items.map(item => [item.ITMREF,item.ITMDES,item.GRAT == 1 ? 'Gratuit' : '-', item.QTY, `${item.NETPRI}`,`${item.TOTLIN}`]);
+       const tableColumns = ['Réference','Désignation', 'Quantité', 'Prix unitaire','Total HT'];
+       const tableRows = orderGroup.items.map(item => [item.ITMREF,item.ITMDES, item.QTY, item.GRAT == 1 ? 'GRATUIT' : `${item.NETPRI}`,`${item.TOTLIN}`]);
 
        doc.autoTable({
            startY: 120,
