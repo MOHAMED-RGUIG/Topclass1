@@ -68,6 +68,10 @@ h1{
 }
 .sticky{
 position:sticky;
+z-index: 999999;
+}
+.d-flex{
+z-index: 999999;
 }
 .bold-text {
   font-weight: bolder !important;
