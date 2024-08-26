@@ -115,15 +115,15 @@ function Cartscreen() {
             doc.setTextColor('#003f7e'); // Set text color to blue (RGB format)
             doc.text(`BON DE COMMANDE`, 65, 110);
     
-            const tableColumns = ['Name', 'Gratuit','Quantity', 'PriceU','Total TTC'];
-            const tableRows = orderGroup.items.map(item => [item.ITMDES,item.GRAT == 1 ? 'Oui' : 'Non', item.QTY, `${item.NETPRI} DH`,`${item.TOTLIN} DH`]);
+            const tableColumns = ['Désignation', 'Gratuit','Quantité', 'Prix unitaire','Total HT'];
+            const tableRows = orderGroup.items.map(item => [item.ITMDES,item.GRAT == 1 ? 'Gratuit' : '-', item.QTY, `${item.NETPRI} `,`${item.TOTLIN}`]);
     
             doc.autoTable({
                 startY: 120,
                 head: [tableColumns],
                 styles: { cellPadding: 1, fontSize: 10 },
                 body: tableRows,
-                foot: [[ '', 'Total', totalQuantity, `-`, `${totalPrice.toFixed(2)} DH`]],
+                foot: [[ '', 'Total', '', `-`, `${totalPrice.toFixed(2)} DH`]],
                 headStyles: { fillColor: '#063970' },  // Light grey background
                 footStyles: { fillColor: '#063970' },
                 didDrawPage: function (data) {
