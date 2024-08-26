@@ -28,7 +28,7 @@ export default function Loginscreen() {
 
 
           <div className='col-md-12 col-12  login-logo'>
-              <img src="./logo.jpg" alt="TopClass Logo" />
+              <img src="./Logo-lavazza.jpg" alt="TopClass Logo" />
           </div>  
 
       <div className='row justify-content-center mt-2'>
