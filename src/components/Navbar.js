@@ -69,7 +69,7 @@ function Navbar() {
                 <li className="nav-item text-start">
                   <a className="nav-link" href="/cart">
                   
-                    <img src="../heart13.png" alt="Cart" style={{ height: '23px' }} />
+                    <img src="../market.jpg" alt="Cart" style={{ height: '23px' }} />
                   </a>
                 </li>
               </ul>
