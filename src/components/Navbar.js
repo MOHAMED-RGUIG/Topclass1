@@ -61,7 +61,7 @@ function Navbar() {
             <span className="navbar-toggler-icon"> </span>
           </button>
         
-            <a className="navbar-brand mx-auto " href="/">
+            <a className="navbar-brand mx-auto " href="/homescreen">
               <img src="./logo.jpg" alt="TopClass Logo" style={{ height: '90px',paddingLeft:'15px' }} />
             </a>
             {currentUser ? (
