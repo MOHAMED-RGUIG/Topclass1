@@ -155,7 +155,7 @@ const productsWithImages = products.map(product => {
         </a>
      
         <a href="/cart" className="nav-link">
-          <i className="bi bi-heart   row   justify-content-center m-3"></i>
+          <i className="bi bi-bag-check   row   justify-content-center m-3"></i>
           <span>Panier</span>
         </a>
       </div>
