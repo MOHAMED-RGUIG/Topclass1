@@ -183,7 +183,7 @@ function Cartscreen() {
                                 <div className='flex-container col-12 col-md-12 mx-auto mt-3 bg-white rounded' key={item.ITMREF_0}>
                                     <hr />
                                     <div className='mx-4'>
-                                        <img src={item.Image} alt='item' style={{ height: '125px', width: '110px', backgroundColor: '#f3f3f3', borderRadius: '3px' }} />
+                                        <img src={item.Image} alt='item' style={{ height: '130px', width: '110px', backgroundColor: '#f3f3f3', borderRadius: '3px' }} />
                                     </div>
                                     <div className='text-start w-50 pt-1'>
                                     <h3 className='pt-2 text-truncate text-start' style={{  fontSize:'10px',color:'#1b6cfc'}}>{item.ITMREF_0}</h3>
