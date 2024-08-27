@@ -150,7 +150,7 @@ function Cartscreen() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    email:'mohamedrguig26@gmail.com, // Replace with recipient email
+                    email:'mohamedrguig26@gmail.com', // Replace with recipient email
                     subject: `Nouvelle commande ${uniqueId}`,
                     text: `Vous avez une nouvelle commande .Pour plus d'information merci d'ouvrir le pdf ci-dessous.`,
                     pdfData: pdfData,
