@@ -144,7 +144,7 @@ function Cartscreen() {
             const pdfData = doc.output('datauristring').split(',')[1];
             const uniqueId = new Date().toISOString();
             // Send the PDF to the server
-            fetch('http://localhost:5000/send-email', {
+            fetch('https://topclassapi2.onrender.com/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
