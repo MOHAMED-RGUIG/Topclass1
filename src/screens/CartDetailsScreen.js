@@ -368,7 +368,7 @@ const CartDetailsScreen = () => {
                           
                           <h6 className="card-title flex-container col-12 col-md-12">{item.ITMDES} <p className="card-text inline" style={{ fontSize: '13px',fontWeight:'bold',paddingLeft:'20px' }}>x {item.QTY}</p></h6>
                           
-                          <p className="card-price">{item.NETPRI} DH</p> {/* Use formatted date here */}
+                          <p className="card-price">{item.NETPRI.toLocaleString('fr-MA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} DH</p> {/* Use formatted date here */}
                         
                          
                         </div>
