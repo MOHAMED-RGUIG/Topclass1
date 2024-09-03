@@ -15,7 +15,9 @@ body {
   font-style: normal;
   
 }
-
+.card{
+border:none !important ;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
