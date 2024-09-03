@@ -196,7 +196,7 @@ function Cartscreen() {
                                             <i className="fa-solid fa-plus" style={{ fontSize: '12px' }} aria-hidden='true' onClick={() => { dispatch(addToCart(item, item.quantity + 1, item.isChecked)) }}></i>
                                         </div>
                                         <div className="cart-price">
-                                            <h6>{item.price} DH</h6>
+                                            <h6>{item.price.toLocaleString('fr-MA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} DH</h6>
                                         </div>
                                     </div>
                                     <div className=''>
@@ -258,7 +258,7 @@ function Cartscreen() {
                 <div className='flex-container col-12'>
                     <div className="col-6">
                         <h2 className="pt-4 total-price" style={{ fontSize: '15px' }}>
-                            <span>{subtotal.toFixed(2)} DH</span>
+                            <span>{subtotal.toLocaleString('fr-MA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} DH</span>
                         </h2>
                     </div>
                     <div className="menubar-nav d-flex justify-content-end col-6">
