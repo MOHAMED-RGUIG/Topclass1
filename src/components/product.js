@@ -83,7 +83,7 @@ const handleCheckboxChange = () => {
        </div>
           <div className='flex-container'>
             <div className='product-price'>
-              <h3>{calculatedPrice} DH TTC</h3>
+              <h3>{calculatedPrice} DH HT</h3>
             </div>
           </div> 
       </div>
