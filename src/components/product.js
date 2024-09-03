@@ -33,7 +33,7 @@ const handleCheckboxChange = () => {
   setIsChecked(!isChecked);
 };
   const calculatedPrice = isChecked ? 0 : product.PRI_0 * quantity;
-  const isMachineCategory = ['MACHINES'].includes(product.Designation_Famille_Stat1);
+  const isMachineCategory = ['MACHINES','MACHINE A MODO MIO','FONTAINE','MACHINE BOUTIQUE','GUZZINI','MACHINE ESPRESSO','MACHINE FIRMA','MOULIN','FONTAINE'].includes(product.Designation_Famille_Stat1);
   const isMachineGrain = ['Nos Grains','Nos Promos','Capsules Lavazza Firma','Capsules Lavazza Blue'].includes(product.Designation_Famille_Stat1)
   return (
  
