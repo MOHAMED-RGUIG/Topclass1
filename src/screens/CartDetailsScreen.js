@@ -141,14 +141,14 @@ const CartDetailsScreen = () => {
        doc.text(`BON DE COMMANDE`, 65, 110);
 
        const tableColumns = ['Réference','Désignation', 'Quantité', 'Prix unitaire','Total HT'];
-       const tableRows = orderGroup.items.map(item => [item.ITMREF,item.ITMDES, item.QTY, item.GRAT == 1 ? 'Gratuit' : `${item.NETPRI}`,`${item.TOTLIN}`]);
+       const tableRows = orderGroup.items.map(item => [item.ITMREF,item.ITMDES, item.QTY, item.GRAT == 1 ? 'Gratuit' : `${item.NETPRI.toLocaleString('fr-MA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,`${item.TOTLIN.toLocaleString('fr-MA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`]);
 
        doc.autoTable({
            startY: 120,
            head: [tableColumns],
            styles: { cellPadding: 1, fontSize: 10 },
            body: tableRows,
-           foot: [[ '','', '', `Total HT`, `${totalPrice.toFixed(2)} DH`]],
+           foot: [[ '','', '', `Total HT`, `${totalPrice.toLocaleString('fr-MA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} DH`]],
            headStyles: { fillColor: '#063970' },  // Light grey background
            footStyles: { fillColor: '#063970' },
            didDrawPage: function (data) {
