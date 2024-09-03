@@ -33,8 +33,8 @@ const handleCheckboxChange = () => {
   setIsChecked(!isChecked);
 };
   const calculatedPrice = isChecked ? 0 : product.PRI_0 * quantity;
-  const isMachineCategory = ['Machines Lavazza Firma','Nos Machines', 'Machines Grain Necta', 'Machines Lavazza Blue', 'Machines Lavazza Espresso Point', 'Machines Lavazza Amodo Mio', 'Machines Grain Gaggia', 'Machines Grain SAECO', 'Machine Grain Spaziale', 'Machines Grain Carimali'].includes(product.Des_Famille);
-  const isMachineGrain = ['Nos Grains','Nos Promos','Capsules Lavazza Firma','Capsules Lavazza Blue'].includes(product.Des_Famille)
+  const isMachineCategory = ['MACHINES'].includes(product.Designation_Famille_Stat1);
+  const isMachineGrain = ['Nos Grains','Nos Promos','Capsules Lavazza Firma','Capsules Lavazza Blue'].includes(product.Designation_Famille_Stat1)
   return (
  
     <div className='mt-3 col-12 col-md-12 cart-product'>         
