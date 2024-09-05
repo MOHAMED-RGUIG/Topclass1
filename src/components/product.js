@@ -25,11 +25,11 @@ export default function Product({ product }) {
   }
   const [imageSrc, setImageSrc] = useState('./greenheart.png');
   const [Btnstyle, setBtnstyle] = useState('category-btn2');
-  const [BtnText, setBtnText] = useState('Ajouter au panier');
+  const [BtnText, setBtnText] = useState('Ajouter');
   const handleClick = () => {
     setImageSrc(prevSrc => prevSrc === './greenheart.png' ? './heart1.png' : './greenheart.png');
     setBtnstyle (prevSrc => prevSrc === 'category-btn2' ? 'category-btn3' : 'category-btn2');
-    setBtnText (prevSrc => prevSrc === 'Ajouter au panier' ? 'Ajoutée' : 'Ajoutée');
+    setBtnText (prevSrc => prevSrc === 'Ajouter' ? 'Ajoutée' : 'Ajoutée');
 
     addtocart();
   };
