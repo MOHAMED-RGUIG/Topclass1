@@ -55,7 +55,7 @@ const handleCheckboxChange = () => {
           <input
             type='number'
             className='form-control'
-            style={{ width: '30px' ,marginRight:'7px',paddingTop:'15px'}}  
+            style={{ width: '50px' ,marginRight:'7px',paddingTop:'15px'}}  
             value={quantity}
             onChange={(e) => {
               const value = parseInt(e.target.value);
