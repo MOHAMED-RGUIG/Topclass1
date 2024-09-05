@@ -15,6 +15,20 @@ body {
   font-style: normal;
   
 }
+.category-btn3 {
+  width: 100px  !important;
+  background-color: #004ffa;
+  border: 0px solid #ddd;
+  color: #ffffff;
+  padding: 7px 4px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 10px;
+  margin: 0 2px;
+  
+  height: 30px !important;
+}
 .card{
 border:none !important ;
 }
