@@ -22,7 +22,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+.category-btn2 {
+  width: 100px  !important;
+  background-color: #f0f0f0;
+  border: 0px solid #ddd;
+  color: #333;
+  padding: 7px 4px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 10px;
+  margin: 0 2px;
+  
+  height: 30px !important;
+}
 .nav-link{
   color: black !important;
 }
