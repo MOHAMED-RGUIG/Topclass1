@@ -235,7 +235,7 @@ button.category-btn.text-truncate.col-xs-3.col-3.col-md-3 {
 }
 
 .check{
-  gap:10px;
+gap:0px;
 }
 .toolbar-inner {
   padding: 10px 0;
@@ -281,22 +281,20 @@ button.category-btn.text-truncate.col-xs-3.col-3.col-md-3 {
   font-family:sans-serif;
 }
 .shop-card .product-tag1 {
-  position: absolute;
-  top: 9px;
+top: 9px;
   right: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color:#ffff;
+
 
   border-radius: 0;
   padding: 4px 0px;
   border: 0;
-  font-size: 12px;
+  font-size: 8px !important;
   font-weight: 350;
   width: 41px;
   height:17px;
-  font-family:sans-serif;
 }
 
 
@@ -305,11 +303,11 @@ button.category-btn.text-truncate.col-xs-3.col-3.col-md-3 {
     box-shadow: 4px 4px 30px -5px rgba(0, 0, 0, 0.08);
     -webkit-box-shadow: 4px 4px 30px -5px rgba(0, 0, 0, 0.08);
     -moz-box-shadow: 4px 4px 30px -5px rgba(0, 0, 0, 0.08);
-    border-radius: 30px;
+    border-radius: 5px;
     width: calc(50% - 50px);
-    padding: 20px;
+    padding: 15px;
     margin-right: 15px;
-    margin-bottom: 15px;
+
     text-align: center;
     border:1px solid #e9ecef;
 }
@@ -353,11 +351,11 @@ footer i{
     margin-top:30px;
     font-family: "Poppins", sans-serif;
 }
-
+/*
 .product-quantity{
   width:100%;
 
-}
+}*/
 
 .product-quantity .form-control{
   font-size: 10px;
