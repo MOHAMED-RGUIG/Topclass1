@@ -120,7 +120,7 @@ const productsWithImages = products.map(product => {
           {renderCustomButtons(categories)}
         </Carousel>
       </div>
-      <div className='search-bar col-11 col-xl-11 col-md-11 text-center'>
+      <div className='search-bar col-11 col-xl-11 col-md-11 text-center mb-2'>
         <input
           className="form-control text-center"
           id="search-input"
@@ -138,7 +138,7 @@ const productsWithImages = products.map(product => {
         ) : (
           
           filteredProducts.map((product) => (
-            <div key={product.ITMREF_0} className='col-6 col-md-6 px-1'>
+            <div key={product.ITMREF_0} className='col-12 col-md-12'>
               <Product product={product}/>
             </div>
           ))
