@@ -50,8 +50,8 @@ const handleCheckboxChange = () => {
       </div>
   
       <div className="product-tag1 d-flex align-items-center justify-content-between" style={{ width: '100%' }}>
-        <div >        <h3 className='pt-2 text-start block' style={{ fontSize:'12px',color:'#1b6cfc', width:'80%' }}>{product.ITMREF_0}</h3>
-        <h6 className='text-start' style={{ fontSize:'7px',color:'black',paddingRight:'45px' }}>{product.ITMDES1_0}</h6>
+        <div >        <h3 className='pt-2 text-start block' style={{ fontSize:'12px',color:'#1b6cfc', width:'100px' }}>{product.ITMREF_0}</h3>
+        <h6 className='text-start' style={{ fontSize:'7px',color:'black' }}>{product.ITMDES1_0}</h6>
 </div>
        
       
