@@ -36,8 +36,7 @@ const handleCheckboxChange = () => {
   const isMachineCategory = ['MACHINES','MACHINE A MODO MIO','FONTAINE','MACHINE BOUTIQUE','GUZZINI','MACHINE ESPRESSO','MACHINE FIRMA','MOULIN','FONTAINE'].includes(product.Designation_Famille_Stat1);
   const isMachineGrain = ['Nos Grains','Nos Promos','Capsules Lavazza Firma','Capsules Lavazza Blue'].includes(product.Designation_Famille_Stat1)
   return (
- 
-   <div className='mt-1 col-12 col-md-12 cart-product'>         
+     <div className='mt-1 col-12 col-md-12 cart-product'>         
     <div style={{ backgroundColor: '#f3f3f3', borderTop: '0px solid #ffffff', width:'100%', padding:'0px !important' }} className='shop-card bg-body d-flex align-items-center'>
       
       <div style={{ width: '20%' }} onClick={handleShow}>
