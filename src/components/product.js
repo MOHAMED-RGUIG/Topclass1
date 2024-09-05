@@ -51,7 +51,7 @@ const handleCheckboxChange = () => {
        
       
         
-        <div className='flex-container check product-quantity text-start mt-4 mx-0' >
+        <div className='flex-container check product-quantity text-start mx-0' >
           <input
             type='number'
             className='form-control'
