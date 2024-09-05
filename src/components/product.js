@@ -98,9 +98,7 @@ const handleCheckboxChange = () => {
           <h6 className="pt-2 text-center justify-content-center mx-auto" style={{ color:'#1b6cfc',fontSize:'9px',width:'90px' }}>{calculatedPrice.toLocaleString('fr-MA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} DH HT</h6>
      
         </div>
-        <div className="product-tag1 justify-content-end mt-4">
-    
-							</div> 
+      
       </div> 
   
     </div>    
