@@ -24,11 +24,16 @@ export default function Product({ product }) {
     });
   }
   const [imageSrc, setImageSrc] = useState('./greenheart.png');
-  
+  const [Btnstyle, setBtnstyle] = useState('category-btn2');
+  const [BtnText, setBtnText] = useState('Ajouter au panier');
   const handleClick = () => {
     setImageSrc(prevSrc => prevSrc === './greenheart.png' ? './heart1.png' : './greenheart.png');
+    setBtnstyle (prevSrc => prevSrc === 'category-btn2' ? 'category-btn3' : 'category-btn2');
+    setBtnText (prevSrc => prevSrc === 'Ajouter au panier' ? 'Ajoutée' : 'Ajoutée');
+
     addtocart();
   };
+
 const handleCheckboxChange = () => {
   setIsChecked(!isChecked);
 };
@@ -37,7 +42,7 @@ const handleCheckboxChange = () => {
     const isPub = ['ART. PUBLICITE'].includes(product.Designation_Famille_Stat1)
 
   return (
-     <div className='mt-1 col-12 col-md-12 cart-product'>         
+   <div className='mt-1 col-12 col-md-12 cart-product'>         
     <div style={{ backgroundColor: '#f3f3f3', borderTop: '0px solid #ffffff', width:'100%', padding:'0px !important' }} className='shop-card bg-body d-flex align-items-center'>
       
       <div style={{ width: '20%' }} onClick={handleShow}>
@@ -88,7 +93,7 @@ const handleCheckboxChange = () => {
     />*/ }
 <button alt='ADD' 
       style={{ height: '10px', cursor: 'pointer',width:'90px' }} 
-      onClick={handleClick} className='category-btn2 mx-auto' > Ajouter au panier</button>
+      onClick={handleClick} className={`${Btnstyle} mx-auto`} > {BtnText}</button>
 
           <h6 className="pt-2 text-center justify-content-center mx-auto" style={{ color:'#1b6cfc',fontSize:'9px',width:'90px' }}>{calculatedPrice.toLocaleString('fr-MA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} DH HT</h6>
      
