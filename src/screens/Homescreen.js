@@ -94,13 +94,13 @@ const productsWithImages = products.map(product => {
          
         >
           <div>
-            <img src='/Lavazza7.jpg' alt="Lavazza" />
+            <img src='/lavazza7.jpg' alt="Lavazza" />
           </div>
           <div>
-            <img src='/Lavazza8.jpg' alt="Lavazza" />
+            <img src='/lavazza8.jpg' alt="Lavazza" />
           </div>
           <div>
-            <img src='/Lavazza9.jpg' alt="Lavazza" />
+            <img src='/lavazza9.jpg' alt="Lavazza" />
           </div>
         </Carousel>
       </div>
