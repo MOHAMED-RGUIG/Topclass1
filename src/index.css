@@ -15,6 +15,31 @@ body {
   font-style: normal;
   
 }
+/*sous famille category*/
+.subcategory-btn {
+  background-color: #f0f0f0; /* Background color for subcategory buttons */
+  color: #333; /* Text color */
+  border: 0px solid #ffffff;
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width:65px !important;
+  height:30px;
+}
+
+.subcategory-btn:hover {
+  background-color: #1b6cfc; /* Hover background color */
+  color: #fff; /* Hover text color */
+}
+
+.subcategory-btn.active {
+  background-color: #1b6cfc; /* Active background color */
+  color: #fff; /* Active text color */
+}
+/*sous famille category*/
 .category-btn3 {
   width: 70px  !important;
   background-color: #004ffa;
