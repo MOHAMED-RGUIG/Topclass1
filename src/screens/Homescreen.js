@@ -19,107 +19,127 @@ export default function Homescreen() {
   React.useEffect(() => {
     feather.replace();
   }, []);
+
   // Filtre
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategorie, setSelectedCategorie] = useState('CAFE GRAIN');
+  const [selectedSubCategorie, setSelectedSubCategorie] = useState(''); // New state for subfamily
 
   // Get products
   useEffect(() => {
     dispatch(getAllProducts());
     dispatch(getAllImgProducts());
   }, [dispatch]);
-// Get products img
 
-const productsWithImages = products.map(product => {
-
-  // Debug line
-  const imgProduct = imgProducts.find(img => img.Reference === product.ITMREF_0);
-
-  return {
+  const productsWithImages = products.map(product => {
+    const imgProduct = imgProducts.find(img => img.Reference === product.ITMREF_0);
+    return {
       ...product,
       Image: imgProduct ? imgProduct.Image : '/defaultImage.png' // Use a default image if not found
-  };
-});
-  // Filtre
+    };
+  });
+
+  // Filter products based on search, category, and subcategory
   const filteredProducts = productsWithImages.filter(product => {
     const matchesName = product.ITMDES1_0.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCode = product.ITMREF_0.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategorie = selectedCategorie ? product['Designation_Famille_Stat1'] === selectedCategorie : true;
-    return  matchesCategorie && (matchesCode ||matchesName );
+    const matchesSubCategorie = selectedSubCategorie ? product['TSICOD_1'] === selectedSubCategorie : true;
+    return matchesCategorie && matchesSubCategorie && (matchesCode || matchesName);
   });
 
   const handleCategoryChange = (Designation_Famille_Stat1) => {
     setSelectedCategorie(Designation_Famille_Stat1);
+    setSelectedSubCategorie(''); // Reset subfamily when main category changes
   };
 
-  // Add "All" to the list of categories
+  const handleSubCategoryChange = (TSICOD_1) => {
+    setSelectedSubCategorie(TSICOD_1);
+  };
+
+  // Categories and subcategories
   const categories = ['All', ...new Set(products.map(product => product.Designation_Famille_Stat1))];
+  const subCategories = ['All', ...new Set(products
+    .filter(product => product.Designation_Famille_Stat1 === selectedCategorie)
+    .map(product => product.TSICOD_1))];
 
-  const renderCustomButtons = (categories) => {
-    const chunkSize = 4; // Number of buttons per slide
-    const chunks = [];
-    for (let i = 0; i < categories.length; i += chunkSize) {
-      chunks.push(categories.slice(i, i + chunkSize));
-    }
-    return chunks.map((chunk, index) => (
-      <div key={index} className="category-slide col-12 col-md-12">
-        {chunk.map((Designation_Famille_Stat1) => (
-          <button
-            key={Designation_Famille_Stat1}
-            className={`category-btn text-truncate ${selectedCategorie === Designation_Famille_Stat1 || (Designation_Famille_Stat1 === 'All' && selectedCategorie === '') ? 'active' : ''} col-xs-3 col-3 col-md-3`}
-            onClick={() => handleCategoryChange(Designation_Famille_Stat1 === 'All' ? '' : Designation_Famille_Stat1)}
-          >
-            {Designation_Famille_Stat1}
-          </button>
-        ))}
-      </div>
-    ));
-  };
-
-  console.log("Products:", products);
-  console.log("Filtered Products:", filteredProducts);
+    const renderCustomButtons = (items, selectedItem, handleChange, customClass = 'category-btn') => {
+      const chunkSize = 4; // Number of buttons per slide
+      const chunks = [];
+      for (let i = 0; i < items.length; i += chunkSize) {
+        chunks.push(items.slice(i, i + chunkSize));
+      }
+      return chunks.map((chunk, index) => (
+        <div key={index} className="category-slide col-12 col-md-12">
+          {chunk.map(item => (
+            <button
+              key={item}
+              className={`${customClass} text-truncate ${selectedItem === item || (item === 'All' && selectedItem === '') ? 'active' : ''} col-xs-3 col-3 col-md-3`}
+              onClick={() => handleChange(item === 'All' ? '' : item)}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      ));
+    };
 
   return (
     <div>
-     <div className="col-12 col-md-12">
+      <div className="col-12 col-md-12">
         <Carousel
           showThumbs={false}
           infiniteLoop
           useKeyboardArrows
-          interval={5000} // 5 secondes entre chaque transition
-          transitionTime={1800} // 1 seconde pour la durée de la transition
+          interval={5000}
+          transitionTime={1800}
           showIndicators={true}
           showStatus={false}
           autoPlay
-         
         >
           <div>
-            <img src='/lavazza7.jpg' alt="Lavazza" />
+            <img src="/lavazza7.jpg" alt="Lavazza" />
           </div>
           <div>
-            <img src='/lavazza8.jpg' alt="Lavazza" />
+            <img src="/lavazza8.jpg" alt="Lavazza" />
           </div>
           <div>
-            <img src='/lavazza9.jpg' alt="Lavazza" />
+            <img src="/lavazza9.jpg" alt="Lavazza" />
           </div>
         </Carousel>
       </div>
 
- 
+      {/* Main Category Carousel */}
       <div className="category-buttons col-xs-12 col-12 col-md-12 col-xl-10 mt-2">
         <Carousel 
           showThumbs={false} 
           infiniteLoop 
           useKeyboardArrows 
-          interval={1000} // Time between transitions in milliseconds (5 seconds)
-          transitionTime={200} // Duration of the transition animation in milliseconds (1 second)
+          interval={1000} 
+          transitionTime={200} 
           showIndicators={false} 
           showStatus={false}
           className="col-xs-12 col-12 col-md-12 col-xl-10"
         >
-          {renderCustomButtons(categories)}
+          {renderCustomButtons(categories, selectedCategorie, handleCategoryChange)}
         </Carousel>
       </div>
+
+      {/* Subfamily Carousel */}
+      <div className="subfamily-buttons col-xs-12 col-12 col-md-12 col-xl-10 mt-2">
+  <Carousel 
+    showThumbs={false} 
+    infiniteLoop 
+    useKeyboardArrows 
+    interval={1000} 
+    transitionTime={200} 
+    showIndicators={false} 
+    showStatus={false}
+    className="col-xs-12 col-12 col-md-12 col-xl-10"
+  >
+    {renderCustomButtons(subCategories, selectedSubCategorie, handleSubCategoryChange, 'subcategory-btn')}
+  </Carousel>
+</div>
       <div className='search-bar col-11 col-xl-11 col-md-11 text-center mb-2'>
         <input
           className="form-control text-center"
@@ -130,6 +150,7 @@ const productsWithImages = products.map(product => {
           onChange={(e) => setSearchQuery(e.target.value)}
         />
       </div>
+ 
       <div className='row justify-content-center col-xl-12 col-md-12 col-12 mx-auto'>
         {loading ? (
           <Loading />
@@ -155,7 +176,7 @@ const productsWithImages = products.map(product => {
         </a>
      
         <a href="/cart" className="nav-link">
-          <i className="bi bi-bag-check   row   justify-content-center m-3"></i>
+          <i className="bi bi-heart   row   justify-content-center m-3"></i>
           <span>Panier</span>
         </a>
       </div>
