@@ -42,7 +42,7 @@ body {
 /*sous famille category*/
 .category-btn3 {
   width: 70px  !important;
-  background-color: #004ffa;
+  background-color:  #dc3545 ;
   border: 0px solid #ddd;
   color: #ffffff;
   padding: 7px 4px;
@@ -63,9 +63,11 @@ code {
 }
 .category-btn2 {
   width: 65px  !important;
-  background-color: #f0f0f0;
+  background-color:#004ffa ;/*#f0f0f0*/
+  
+
   border: 0px solid #ddd;
-  color: #333;
+  color: #ffff;
   padding: 7px 4px;
   border-radius: 2px;
   transition: all 0.3s ease;
