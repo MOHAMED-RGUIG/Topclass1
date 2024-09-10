@@ -45,7 +45,7 @@ font-family: 'Poppins';
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
-  width: 70px  !important;
+  width: 60px  !important;
   background-color:  #dc3545 ;
   border: 0px solid #ddd;
   color: #ffffff;
@@ -53,10 +53,10 @@ font-family: 'Poppins';
   border-radius: 2px;
   transition: all 0.3s ease;
   cursor: pointer;
-  font-size: 10px;
+  font-size: 8px;
   margin: 0 2px;
   
-  height: 30px !important;
+  height: 25px !important;
 }
 .card{
 border:none !important ;
@@ -79,10 +79,10 @@ code {
   border-radius: 2px;
   transition: all 0.3s ease;
   cursor: pointer;
-  font-size: 10px;
+  font-size: 8px;
   margin: 0 2px;
   
-  height: 30px !important;
+  height: 28px !important;
 }
 .nav-link{
   color: black !important;
