@@ -41,6 +41,10 @@ body {
 }
 /*sous famille category*/
 .category-btn3 {
+font-family: 'Poppins';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
   width: 70px  !important;
   background-color:  #dc3545 ;
   border: 0px solid #ddd;
@@ -64,7 +68,10 @@ code {
 .category-btn2 {
   width: 65px  !important;
   background-color: #1b6cfc ;/*#f0f0f0   #004ffa */
-  
+  font-family: 'Poppins';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
 
   border: 0px solid #ddd;
   color: #ffff;
