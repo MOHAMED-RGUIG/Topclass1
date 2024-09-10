@@ -28,7 +28,7 @@ export default function Product({ product }) {
   const [BtnText, setBtnText] = useState('Ajouter');
   const handleClick = () => {
     setImageSrc(prevSrc => prevSrc === './greenheart.png' ? './heart1.png' : './greenheart.png');
-    setBtnstyle (prevSrc => prevSrc === 'category-btn2' ? 'category-btn3' : 'category-btn2');
+    setBtnstyle (prevSrc => prevSrc === 'category-btn2' ? 'category-btn3' : 'category-btn3');
     setBtnText (prevSrc => prevSrc === 'Ajouter' ? 'Ajoutée' : 'Ajoutée');
 
     addtocart();
