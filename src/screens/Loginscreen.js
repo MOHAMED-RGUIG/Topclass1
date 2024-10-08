@@ -12,19 +12,17 @@ export default function Loginscreen() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Check if user is in URL parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    const userFromUrl = urlParams.get('user');
-    
-    if (userFromUrl) {
-      const user = JSON.parse(decodeURIComponent(userFromUrl));
-      // Save the user in localStorage for App 2
-      localStorage.setItem('currentUser', JSON.stringify(user));
-      window.location.href = '/homescreen';  // Redirect to home screen
-    } else if (localStorage.getItem('currentUser')) {
-      window.location.href = '/homescreen';  // Redirect if already logged in
-    }
-  }, []);
+  const urlParams = new URLSearchParams(window.location.search);
+  const userFromUrl = urlParams.get('user');
+
+  if (userFromUrl) {
+    const user = JSON.parse(decodeURIComponent(userFromUrl));
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    window.location.href = '/homescreen'; // Rediriger vers la page d'accueil
+  } else if (localStorage.getItem('currentUser')) {
+    window.location.href = '/homescreen'; // Rediriger si déjà connecté
+  }
+}, []);
 
   function login() {
     const user = { email, password };
