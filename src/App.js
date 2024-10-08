@@ -24,7 +24,7 @@ function AppContent() {
       {!isLoginScreen && <Navbar />}
       
       <Routes>
-      <Route path='/' element={<Loginscreen />} />
+      <Route path='/' element={<Homescreen />} />
         <Route path='/homescreen' element={<Homescreen />} />
   
         <Route path='/cart' element={<Cartscreen />} />
