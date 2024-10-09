@@ -253,7 +253,8 @@ function Cartscreen() {
                         style={{ width: '90%', fontSize: '13px' }}
                     />
                 </div></form>
-            </div>
+            </div>µ
+{/*
             <footer className="menubar-area fot footer-fixed mt-2 cart-footer" style={{ backgroundColor: 'rgb(255,255,255)' }}>
                 <div className='flex-container col-12'>
                     <div className="col-6">
@@ -265,7 +266,7 @@ function Cartscreen() {
                         <Checkout subtotal={subtotal} codeClient={codeClient} rS={rS} modalitePai={modalitePai} dateCmd={dateCmd} handleCheckout={handleCheckout} />
                     </div>
                 </div>
-            </footer>
+            </footer>  */}
         </div>
     );
 }
