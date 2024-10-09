@@ -181,7 +181,7 @@ export default function Homescreen() {
           <span>Panier</span>
         </a>
       </div>
-    </footer>  /*} 
+    </footer>  */} 
       </div>
      
     </div>
