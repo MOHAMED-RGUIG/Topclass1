@@ -21,7 +21,7 @@ function AppContent() {
   return (
     <div className="App">
       {/* Affiche le Navbar uniquement si ce n'est pas la page de login */}
-  {!isLoginScreen && <Navbar />}
+   {/*{!isLoginScreen && <Navbar />} */}
      
       <Routes>
       <Route path='/' element={<Loginscreen />} />
