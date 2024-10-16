@@ -175,7 +175,7 @@ function Cartscreen() {
                 <div className='col-md-12 col-12'>
         {/* <h2 className='mx-auto col-md-12 col-12 mt-1 mb-1'>Panier</h2>*/}
                     {cartItemsFromStorage.length === 0 ? (
-                        <p>Votre panier est vide, merci d'ajouter des articles!</p>
+                        <p className='mt-3 mb-1' >Votre panier est vide, merci d'ajouter des articles!</p>
                     ) : (
                         <>
                             
