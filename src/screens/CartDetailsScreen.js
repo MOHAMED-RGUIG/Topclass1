@@ -288,7 +288,7 @@ const CartDetailsScreen = () => {
   return (
     <div className="container justify-content-center col-12 col-xl-12 col-md-12 mt-2 mx-auto orders-details">
       <div className="mb-1 pb- titre-pages">
-        <h6>Mes Commandes</h6>
+    {/* <h6>Mes Commandes</h6>*/}
       
       { /*<h2>Total price: {totalTOTLIN} DH</h2>*/  }  
       </div>
