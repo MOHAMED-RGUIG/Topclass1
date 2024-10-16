@@ -173,7 +173,7 @@ function Cartscreen() {
         <div className='container col-xl-12 col-md-12 col-12 cart-details'>
             <div className='justify-content-center col-12 col-md-12'>
                 <div className='col-md-12 col-12'>
-                <h2 className='mx-auto col-md-12 col-12 mt-1 mb-1'>Panier</h2>
+        {/* <h2 className='mx-auto col-md-12 col-12 mt-1 mb-1'>Panier</h2>*/}
                     {cartItemsFromStorage.length === 0 ? (
                         <p>Votre panier est vide, merci d'ajouter des articles!</p>
                     ) : (
