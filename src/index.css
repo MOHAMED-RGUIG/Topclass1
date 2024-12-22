@@ -95,7 +95,8 @@ border: none !important;
 
 }
 .btn5{
-  background-color: #1b6cfc !important;
+   background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(24, 63, 127, 1) 0%, rgba(24, 63, 127, 1) 0%, rgba(18, 100, 159, 1) 48%, rgba(13, 134, 189, 1) 71%, rgba(10, 150, 202, 1) 93%) !important;
   color: white;
   border: none;
   font-family: 'Poppins';
