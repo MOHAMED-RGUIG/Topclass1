@@ -31,12 +31,16 @@ body {
 }
 
 .subcategory-btn:hover {
-  background-color: #1b6cfc; /* Hover background color */
+   background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(24, 63, 127, 1) 0%, rgba(24, 63, 127, 1) 0%, rgba(18, 100, 159, 1) 48%, rgba(13, 134, 189, 1) 71%, rgba(10, 150, 202, 1) 93%) !important;
+ 
   color: #fff; /* Hover text color */
 }
 
 .subcategory-btn.active {
-  background-color: #1b6cfc; /* Active background color */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(24, 63, 127, 1) 0%, rgba(24, 63, 127, 1) 0%, rgba(18, 100, 159, 1) 48%, rgba(13, 134, 189, 1) 71%, rgba(10, 150, 202, 1) 93%) !important;
+ 
   color: #fff; /* Active text color */
 }
 /*sous famille category*/
@@ -67,7 +71,9 @@ code {
 }
 .category-btn2 {
   width: 65px  !important;
-  background-color: #1b6cfc ;/*#f0f0f0   #004ffa */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(24, 63, 127, 1) 0%, rgba(24, 63, 127, 1) 0%, rgba(18, 100, 159, 1) 48%, rgba(13, 134, 189, 1) 71%, rgba(10, 150, 202, 1) 93%) !important;
+ 
   font-family: 'Poppins';
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -529,7 +535,9 @@ footer i{
 .cart-details .cart-quant .fa-minus, .cart-details .cart-quant .fa-plus {
   color: white;
   font-weight: bolder;
-  background-color: #1b6cfc;
+   background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(24, 63, 127, 1) 0%, rgba(24, 63, 127, 1) 0%, rgba(18, 100, 159, 1) 48%, rgba(13, 134, 189, 1) 71%, rgba(10, 150, 202, 1) 93%) !important;
+ 
   padding: 5px;
   border-radius: 0px;
   border: none;
