@@ -416,7 +416,7 @@ footer i{
 .product-price h3{
   font-size: 15px;
     text-align: center;
-    color: #1b6cfc;
+    color: #183f7f;
     font-weight: bold !important;
     margin-top:30px;
     font-family: "Poppins", sans-serif;
@@ -526,7 +526,7 @@ footer i{
   display: inline;
     font-size: 15px;
     text-align: center;
-    color: #1b6cfc;
+    color: #183f7f;
     font-weight: bold !important;
     font-family: "Poppins", sans-serif;
 }
@@ -643,7 +643,7 @@ footer i{
   text-transform: uppercase;
   margin-top: 30px !important;
   margin-bottom:20px;
-  color: #1b6cfc;
+  color: #183f7f;
 }
 
 .order-items{
