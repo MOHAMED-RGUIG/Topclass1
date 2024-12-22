@@ -86,7 +86,7 @@ export default function Homescreen() {
 
   return (
     <div>
-      <div className="col-12 col-md-12">
+    {/* <div className="col-12 col-md-12">
         <Carousel
           showThumbs={false}
           infiniteLoop
@@ -108,7 +108,7 @@ export default function Homescreen() {
           </div>
         </Carousel>
       </div>
-
+*/}
       {/* Main Category Carousel */}
       <div className="category-buttons col-xs-12 col-12 col-md-12 col-xl-10 mt-2">
         <Carousel 
