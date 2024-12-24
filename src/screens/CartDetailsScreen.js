@@ -82,9 +82,11 @@ const CartDetailsScreen = () => {
    logoImg.src = '../logo.jpg'; // Ensure the path is correct
 
    // Calculate total price and quantity
-   const totalQuantity = orderGroup.items.reduce((total, item) => total + item.QTY, 0);
-   const totalP = orderGroup.items.reduce((total, item) => total + item.NETPRI, 0);
-   const totalPrice = orderGroup.items.reduce((total, item) => total + item.TOTLIN, 0);
+// Calculate total price and quantity safely
+const totalQuantity = orderGroup.items.reduce((total, item) => total + (item.QTY || 0), 0);
+const totalP = orderGroup.items.reduce((total, item) => total + (item.NETPRI || 0), 0);
+const totalPrice = orderGroup.items.reduce((total, item) => total + (item.TOTLIN || 0), 0);
+
 
    logoImg.onload = () => {
        doc.addImage(logoImg, 'JPG', 25, 15, 30, 20); // x, y, width, height
@@ -125,7 +127,19 @@ const CartDetailsScreen = () => {
        doc.text(`BON DE COMMANDE`, 65, 110);
 
        const tableColumns = ['Réference','Désignation', 'Quantité', 'Prix unitaire','Total HT'];
-       const tableRows = orderGroup.items.map(item => [item.ITMREF,item.ITMDES, item.QTY, item.GRAT == 1 ? 'Gratuit' : `${item.NETPRI.toLocaleString('fr-MA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,`${item.TOTLIN.toLocaleString('fr-MA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`]);
+const tableRows = orderGroup.items.map(item => [
+  item.ITMREF,
+  item.ITMDES,
+  item.QTY,
+  item.GRAT == 1
+    ? 'Gratuit'
+    : item.NETPRI
+    ? `${item.NETPRI.toLocaleString('fr-MA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+    : 'N/A', // Fallback for undefined NETPRI
+  item.TOTLIN
+    ? `${item.TOTLIN.toLocaleString('fr-MA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+    : 'N/A', // Fallback for undefined TOTLIN
+]);
 
        doc.autoTable({
            startY: 120,
@@ -242,8 +256,12 @@ const CartDetailsScreen = () => {
                           
                           <h6 className="card-title flex-container col-12 col-md-12">{item.ITMDES} <p className="card-text inline" style={{ fontSize: '13px',fontWeight:'bold',paddingLeft:'20px' }}>x {item.QTY}</p></h6>
                           
-                          <p className="card-price">{item.NETPRI.toLocaleString('fr-MA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} DH</p> {/* Use formatted date here */}
-                        
+<p className="card-price">
+  {item.NETPRI
+    ? `${item.NETPRI.toLocaleString('fr-MA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} DH`
+    : 'N/A'}
+</p>
+                     
                          
                         </div>
                      
